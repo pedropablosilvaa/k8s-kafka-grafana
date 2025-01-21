@@ -8,7 +8,7 @@ from grafana_client import GrafanaApi
 def main():
 
     # Definir el formato de tiempo y la URL de la API
-    KAFKA_SERVER = 'localhost:9092' 
+    KAFKA_SERVER = 'broker:9092' 
     TOPIC = 'weather_topic'  # Topic name in Kafka
     current_time = datetime.today()
     end_time = current_time - timedelta(hours=1)
