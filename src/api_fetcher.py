@@ -29,7 +29,7 @@ class WeatherAPI:
             response_api.raise_for_status()  # error
             data = response_api.text
             parsed_data = json.loads(data)
-            print(parsed_data)  # show data fetched from API
+            #print(parsed_data)  # show data fetched from API
             return parsed_data
         except requests.RequestException as e:
             print(f"Error fetching data: {e}")

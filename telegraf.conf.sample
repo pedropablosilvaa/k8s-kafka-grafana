@@ -1,0 +1,16 @@
+[agent]
+  interval = "10s"
+  flush_interval = "10s"
+
+# Kafka input plugin
+[[inputs.kafka_consumer]]
+  brokers = ["broker:9092"]  # Use the Kafka service name
+  topics = ["weather_topic"]
+  data_format = "json"  # Assuming your Kafka messages are in JSON format
+
+# InfluxDB output plugin
+[[outputs.influxdb_v2]]
+  urls = ["http://influxdb2:8086"]  # Use the InfluxDB service name
+  token = "super-mega-token"  # Use the token from secrets
+  organization = "docs"
+  bucket = "home"

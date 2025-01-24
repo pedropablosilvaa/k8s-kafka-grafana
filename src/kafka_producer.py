@@ -1,6 +1,7 @@
 from kafka import KafkaProducer
 import json
 from typing import Dict
+import time
 
 class KafkaProducerService:
     """
@@ -15,8 +16,7 @@ class KafkaProducerService:
         """
         self.kafka_server = kafka_server
         self.producer = KafkaProducer(
-            bootstrap_servers=self.kafka_server,
-            value_serializer=lambda v: json.dumps(v).encode('utf-8')  # Serialize the data to JSON and encode it as UTF-8
+            bootstrap_servers=self.kafka_server  # Serialize the data to JSON and encode it as UTF-8
         )
 
     def send_to_kafka(self, topic: str, data: dict) -> None:
