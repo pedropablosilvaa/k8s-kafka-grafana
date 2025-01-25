@@ -1,0 +1,15 @@
+apiVersion: 1
+
+datasources:
+  - name: influxdb2
+    type: influxdb
+    access: proxy
+    url: http://influxdb2:8086  # URL of your InfluxDB 2.x instance
+    isDefault: true
+    editable: true
+    jsonData:
+      version: Flux  # Use "Flux" for InfluxDB 2.x
+      organization: "docs"  # Required for InfluxDB 2.x
+      defaultBucket: "weather_db"  # Required for InfluxDB 2.x
+    secureJsonData:
+      token: "my-super-mega-token"  # Your InfluxDB 2.x token

@@ -171,3 +171,4 @@ cython_debug/
 .pypirc
 telegraf.conf
 foo.py
+datasource.yml

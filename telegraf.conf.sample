@@ -11,6 +11,6 @@
 # InfluxDB output plugin
 [[outputs.influxdb_v2]]
   urls = ["http://influxdb2:8086"]  # Use the InfluxDB service name
-  token = "super-mega-token"  # Use the token from secrets
+  token = "my-super-mega-token"  # Use the token from secrets
   organization = "docs"
-  bucket = "home"
+  bucket = "weather_db"
